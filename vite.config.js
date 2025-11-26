@@ -3,6 +3,9 @@ import { readFileSync } from 'fs'
 const { version } = JSON.parse(readFileSync('./package.json', 'utf-8'))
 
 export default defineConfig({
+  // Use a relative base path so assets resolve correctly when served from
+  // GitHub Pages (or any subdirectory).
+  base: process.env.BASE_PATH || './',
   root: '.',
   publicDir: 'public',
   server: {
