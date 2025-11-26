@@ -6,7 +6,7 @@
     flex-direction: column;
     border-right: 2px solid var(--border-color);
     position: relative;
-    z-index: var(--z-overlay);
+    z-index: var(--z-tooltip);
 }
 
 .app-container.navbar-right .navbar {
@@ -55,8 +55,7 @@
 
 .navbar-scroll-container {
     height: 100%;
-    overflow-y: auto;
-    overflow-x: visible;
+    overflow: visible;
     padding-right: var(--space-xs);
 }
 
