@@ -252,17 +252,21 @@ button:disabled {
 
 .tooltiptext {
   visibility: hidden;
-  width: 320px;
+  width: clamp(260px, 40vw, 420px);
+  max-width: 90vw;
   background-color: black;
   color: #fff;
-  text-align: center;
+  text-align: left;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 12px 14px;
   position: absolute;
-  z-index: 1;
+  z-index: var(--z-tooltip);
   top: -5px;
   left: 110%;
-  font-size: 24px;
+  font-size: 28px;
+  line-height: 1.5;
+  box-shadow: var(--shadow-md);
+  word-break: break-word;
 }
 
 .tooltiptext::after {
@@ -276,6 +280,7 @@ button:disabled {
   border-color: transparent black transparent transparent;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext,
+.tooltip:focus-within .tooltiptext {
   visibility: visible;
 }
