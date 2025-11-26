@@ -52,6 +52,18 @@ Clone the repository:
 git clone https://github.com/yourusername/MicToMorse.git
 cd MicToMorse
 ```
+
+### Option 3: Deploy on GitHub Pages
+
+This repository includes an automated deployment workflow for GitHub Pages. Once the Pages
+site is enabled in your repository settings, every push to `f3nici` will:
+
+1. Install dependencies with `npm ci`.
+2. Build the Vite project with a GitHub Pages–friendly base path.
+3. Upload the compiled `dist` directory and publish it to the `github-pages` environment.
+
+If you need to trigger a manual deployment, you can also run the **Deploy to GitHub Pages**
+workflow manually from the Actions tab.
 ---
 
 ## 📬 Issues & Pull Requests
